@@ -7,12 +7,12 @@ export ZSH=$HOME/.oh-my-zsh
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
-
+#export LIBGL_ALWAYS_SOFTWARE=1
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="sorin"
+ZSH_THEME="fino"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,19 +104,23 @@ xrdb ~/.Xresources
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias emx="emacs -nw"
+alias emx="emacs . & "
 alias rvz="i3-msg 'workspace 2; exec rosrun rviz rviz'"
 alias wfc="nmcli dev wifi connect "
 
+export PATH=$PATH:$HOME/codes/sh/
+
 export PATH="$PATH:/usr/local/flutter/bin"
 
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_SDK_ROOT/latest/bin
+export ANDROID_HOME=$HOME/Android/
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
 
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/include/opencv4/opencv2/
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
@@ -133,3 +137,8 @@ export PATH="$HOME/doomemacs/bin:$PATH"
 export PATH="$HOME/Downloads/c3:$PATH"
 export PATH="$HOME/Downloads/blender-2.79-linux-glibc219-x86_64:$PATH"
 . "/home/jarvis/.deno/env"
+
+# NVM setup
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
