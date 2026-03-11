@@ -1,0 +1,7 @@
+alt keycode 12=F13
+alt keycode 13=F14
+
+string F13="setfont /usr/share/consolefonts/Lat15-Terminus16.psf.gz\n"
+string F14="setfont /usr/share/consolefonts/Lat15-Terminus24x12.psf.gz\n"
+
+
