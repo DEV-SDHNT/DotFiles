@@ -58,16 +58,26 @@
  '(window-divider ((t (:foreground "#0A0"))))
  '(flymake-error ((t (:background "#600" :box (:line-width -1 :color "#900")))))
  '(flymake-note ((t (:background "#042" :box (:line-width -1 :color "#084")))))
- '(rainbow-delimiters-depth-1-face ((t (:foreground "#00ff00"))))
- '(rainbow-delimiters-depth-2-face ((t (:foreground "#00aa00"))))
- '(rainbow-delimiters-depth-3-face ((t (:foreground "#22aa44"))))
- '(rainbow-delimiters-depth-4-face ((t (:foreground "#33aa66"))))
- '(rainbow-delimiters-depth-5-face ((t (:foreground "#66ee44"))))
- '(rainbow-delimiters-depth-6-face ((t (:foreground "#449944"))))
- '(rainbow-delimiters-depth-7-face ((t (:foreground "#34ee66"))))
- '(rainbow-delimiters-depth-8-face ((t (:foreground "#9Cdd00"))))
- '(rainbow-delimiters-depth-9-face ((t (:foreground "#00ff00")))))
-;((((((((()))))))))
+ '(rainbow-delimiters-depth-1-face ((t (:foreground "#22c55e"))))
+ '(rainbow-delimiters-depth-2-face ((t (:foreground "#84cc16"))))
+ '(rainbow-delimiters-depth-3-face ((t (:foreground "#eab308"))))
+ '(rainbow-delimiters-depth-4-face ((t (:foreground "#f97316"))))
+ '(rainbow-delimiters-depth-5-face ((t (:foreground "#ef4444"))))
+ '(rainbow-delimiters-depth-6-face ((t (:foreground "#f43f53"))))
+ '(rainbow-delimiters-depth-7-face ((t (:foreground "#3b82f6"))))
+ '(rainbow-delimiters-depth-8-face ((t (:foreground "#06b6d4"))))
+ '(rainbow-delimiters-depth-9-face ((t (:foreground "#10b981")))))
+
+;(((((((((My Color scheme)))))))))
+;#00ff00
+;#00aa00
+;#22aa44
+;#33aa66
+;#66ee44
+;#449944
+;#34ee66
+;#9Cdd00
+;#00ff00
 
 ;;;###autoload
 (when load-file-name
@@ -77,5 +87,4 @@
 
 
 (provide-theme 'jmm)
-
-;;;jmm-theme.el ends here
+;;;jmm-theme.el ends he
