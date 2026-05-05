@@ -105,6 +105,25 @@
   :ensure t)
 (add-to-list 'auto-mode-alist '("\\.asm\\'" . nasm-mode))
 
+;; Org mode
+
+;(setq org-preview-latex-default-process 'dvisvgm)
+;(setq org-format-latex-options
+ ;     (plist-put org-format-latex-options :scale 2.0))
+
+(use-package org
+  :config
+  (setq org-format-latex-options
+        (plist-put org-format-latex-options :scale 2.0))
+  (setq org-startup-folded t))
+
+
+;; JSX mode
+
+;(dolist (ext '("\\.js\\'" "\\.jsx\\'" "\\.ts\\'" "\\.tsx\\'"))
+;  (add-to-list 'auto-mode-alist `(,ext . js-jsx-mode)))
+;(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js-jsx-mode))
+
 ;; (use-package company-lsp
 ;;   :after (company lsp-mode)
 ;;   :config
@@ -176,7 +195,7 @@
 (add-hook 'c3-mode-hook 'flycheck-mode)
 (add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 ;(add-hook 'prog-mode-hook 'copilot-mode)
-(setq tab-width 2)
+(setq tab-width 1)
 (setq-default indent-tabs-mode nil)
 
 (set-frame-parameter nil 'alpha-background 85)
@@ -215,14 +234,16 @@
                   alect-themes all-the-icons-completion
                   all-the-icons-dired asm-blox auctex-latexmk
                   autothemer avy-flycheck ayu-theme base32 buffer-move
-                  cargo catppuccin-theme chatgpt-shell cl-libify
-                  company-anaconda company-go company-inf-ruby
-                  company-math competitive-programming-snippets
-                  copilot counsel-edit-mode cpp-auto-include
+                  cargo catppuccin-theme chatgpt-shell chess cl-libify
+                  company-anaconda company-c-headers company-emoji
+                  company-go company-inf-ruby company-math company-php
+                  company-web competitive-programming-snippets
+                  composer copilot counsel-edit-mode cpp-auto-include
                   cpputils-cmake csv-mode dart-server dash-docs
                   devdocs dirtree dirvish django-mode django-snippets
                   doom-modeline doric-themes drag-stuff dream-theme
-                  electric-operator electric-spacing eslint-rc
+                  electric-operator electric-spacing eslint-rc evil
+                  evil-mc evil-numbers evil-opener evil-rails
                   ewal-doom-themes ewal-spacemacs-themes flex-autopair
                   flutter-l10n-flycheck flycheck-golangci-lint
                   flycheck-rust flymake-golangci flymake-nasm
@@ -255,10 +276,11 @@
                   run-command-recipes rust-auto-use rust-playground
                   simple-modeline sixcolors-theme smex snazzy-theme
                   spacegray-theme sublime-themes svelte-mode
-                  svg-mode-line-themes svg-tag-mode transient-cycles
-                  transient-extras treemacs-tab-bar tron-legacy-theme
-                  tsc typescript-mode use-package vterm web-mode
-                  with-editor xenops xterm-color yasnippet-capf
+                  svg-mode-line-themes svg-tag-mode svgo
+                  transient-cycles transient-extras treemacs-tab-bar
+                  tron-legacy-theme tsc typescript-mode use-package
+                  vterm web-beautify web-mode with-editor xenops
+                  xterm-color yasnippet-capf
                   yasnippet-classic-snippets yasnippet-snippets
                   zeal-at-point)))
 (custom-set-faces
@@ -267,3 +289,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:background nil)))))
+(put 'upcase-region 'disabled nil)
