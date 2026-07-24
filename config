@@ -12,11 +12,11 @@
 set $mod Mod4
 default_border pixel 0
 default_floating_border pixel 0
-workspace_layout tabbed
+#workspace_layout tabbed
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:JetBrains Mono 8
+font pango:JetBrains Mono 9
 
 default_orientation auto
 
@@ -31,7 +31,7 @@ exec --no-startup-id setxkbmap mykeys -variant basics
 exec --no-startup-id dex --autostart --environment i3
 
 exec --no-startup-id thunar --daemon
-#exec --no-startup-id picom -b
+exec --no-startup-id picom -b
 exec --no-startup-id emacs --daemon
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -76,7 +76,7 @@ bindsym $mod+Shift+p exec maim ~/Pictures/$(date +%s).png
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run -fn "Monospace:size=10" -nb "#000000" -nf "#00ff00" -sb "#00ff00" -sf "#000000"
 # A more modern dmenu replacement is rofi:
-bindsym $mod+d exec "rofi -modi drun,run -show drun -theme /usr/share/rofi/themes/matrix.rasi"
+bindsym $mod+d exec "rofi -modi drun,run -show drun -theme ~/.local/share/rofi/themes/matrix.rasi"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
@@ -225,20 +225,20 @@ bar {
 	   tray_padding 20
 	   i3bar_command i3bar --transparency
 	colors{
-           background #000000
+           background #000000aa
            statusline #00ee00
            separator  #33333333
-	   focused_workspace #000000 #000000 #00ee00
-	   active_workspace #000000 #00AA00 #EEEEEE
-	   inactive_workspace #000000 #000000 #666666
+	   focused_workspace #00ee00aa #000000aa #00ee00
+	   active_workspace #000000aa #00AA00aa #EEEEEE
+	   inactive_workspace #000000aa #000000aa #666666
     }
 }
 
 #new_window none
 #new_float none
 for_window [class=".*"] border pixel 1
-gaps inner 0
-gaps outer 0
+#gaps inner 0
+#gaps outer 0
 
 #class                  border  bg      text    indicatr child_border
 client.focused          #00ee00 #00000066 #00ee00 #00ff00  #00ff00
@@ -248,10 +248,10 @@ client.placeholder      #00aa00 #00aa0066 #000000 #00aa00  #00aa00
 client.background       #000000
 
 #exec_always feh --bg-fill /home/jarvis/Pictures/'beautiful-anime-character-cartoon-scene.jpg'
-exec_always feh --bg-fill /home/jarvis/Pictures/'anime-boy.jpg'
+exec_always feh --bg-fill /home/jarvis/Pictures/'mythical-dragon-beast-anime-style.jpg'
 #exec_always feh --bg-fill /home/jarvis/Pictures/'anime-moon-landscape.jpg'
 #exec_always feh --bg-fill /home/jarvis/Pictures/'japan-background-digital-art.jpg'  
 #exec_always feh --bg-fill /home/jarvis/Pictures/'anime-character.png'
 #exec_always feh --bg-fill --randomize --recursive --reload 3 ~/Pictures
 #exec_always feh --bg-fill /home/jarvis/Pictures/regular-anime-1.jpg
-bindsym $mod+Shift+i exec feh --bg-fill /home/jarvis/Pictures/'bw.png'
+#bindsym $mod+Shift+i exec feh --bg-fill /home/jarvis/Pictures/'bw.png'

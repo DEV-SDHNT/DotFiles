@@ -5,62 +5,65 @@
  */
 
 * {
-    selected-normal-foreground:  rgba ( 0, 0, 0, 100 % );
     foreground:                  rgba ( 00, 255, 00, 100 % );
+    background:                  rgba ( 0, 0, 0, 80 % );
 
-    normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 25, 250, 25, 0 % );
-    red:                         rgba ( 220, 50, 47, 00 % );
-    selected-urgent-foreground:  rgba ( 51, 51, 51, 100 % );
-    blue:                        rgba ( 00, 210, 00, 100 % );
-    urgent-foreground:           rgba ( 255, 153, 153, 100 % );
-    alternate-urgent-background: rgba ( 255, 255, 255, 50 % );
-    active-foreground:           rgba ( 17, 17, 17, 100 % );
-    lightbg:                     rgba ( 20, 22, 20, 10 % );
-    selected-active-foreground:  rgba ( 51, 51, 51, 100 % );
-    alternate-active-background: rgba ( 255, 255, 255, 0% );
-    background:                  rgba ( 0, 0, 250, 0 % );
-    bordercolor:                 rgba ( 00, 255, 200, 10 % );
-    alternate-normal-foreground: @foreground;
-    normal-background:           rgba ( 00, 0, 0, 0% );
-    lightfg:                     rgba ( 00, 104, 00, 100 % );
-    selected-normal-background:  rgba ( 00, 100, 00, 100 % );
     border-color:                @foreground;
-    spacing:                     5;
-    separatorcolor:              rgba ( 00, 170, 00, 100 % );
-    urgent-background:           rgba ( 0, 0, 0, 0 % );
-    selected-urgent-background:  rgba ( 255, 153, 153, 100 % );
+    spacing:                     5px;
+    separatorcolor:              rgba ( 0, 100, 0, 80 % );
+    normal-foreground:           rgba ( 0, 150, 0, 100 % );
+    normal-background:           @background;
+
+    alternate-normal-foreground: @normal-foreground;
+    alternate-normal-background: @background;
+
+    selected-urgent-foreground:  rgba ( 51, 51, 51, 100 % );
+    selected-urgent-background:  rgba ( 255, 153, 153, 80 % );
+
+    selected-active-foreground:  rgba ( 51, 51, 51, 100 % );
+    selected-active-background:  rgba ( 17, 17, 17, 80 % );
+
+    selected-normal-foreground:  rgba ( 0, 250, 0, 100 % );
+    selected-normal-background:  rgba ( 00, 00, 00, 10 % );
+    
+    urgent-foreground:           rgba ( 255, 153, 153, 100 % );
+    urgent-background:           rgba ( 0, 0, 0, 80 % );
+
     alternate-urgent-foreground: @urgent-foreground;
-    background-color:            rgba ( 0, 0, 0, 0 % );
+    alternate-urgent-background: rgba ( 255, 255, 255, 50 % );
+
+    background-color:            @background;
     alternate-active-foreground: @active-foreground;
-    active-background:           rgba ( 0, 0, 0, 50 % );
-    selected-active-background:  rgba ( 17, 17, 17, 100 % );
+    alternate-active-background: rgba ( 255, 255, 255, 0% );
+    active-foreground:           rgba ( 17, 17, 17, 100 % );
+    active-background:           rgba ( 0, 0, 0, 80 % );
 }
+
 window {
-    background: rgba(00, 200, 00, 100 %);
-    border:           1;
-    padding:          5;
+    background: rgba ( 0, 0, 00, 50 %);
+    border:           1px;
+    padding:          5px;
 }
 mainbox {
-    background:rgba(0,250,0,100 %);
-    border:  0;
-    padding: 1;
+    background: rgba ( 0, 0, 0, 50 % );
+    border:  0px;
+    padding: 4;
 }
 message {
-    border:       1px dash 0px 0px ;
+    border:       2px  0px 0px ;
     border-color: @separatorcolor;
-    padding:      1px ;
+    padding:      5px ;
 }
 textbox {
     text-color: @foreground;
 }
 listview {
     fixed-height: 0;
-    border:       2px dash 0px 0px ;
+    border:       1px 0px 0px ;
     border-color: @separatorcolor;
     spacing:      2px ;
     scrollbar:    true;
-    padding:      2px 0px 0px ;
+    padding:      4px 0px 0px ;
 }
 element {
     border:  0;
@@ -85,6 +88,8 @@ element.normal.active {
 element.selected.normal {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
+    border: 1px;
+    padding: 2px;
 }
 element.selected.urgent {
     background-color: @selected-urgent-background;
@@ -113,12 +118,13 @@ scrollbar {
     padding:      0;
 }
 mode-switcher {
-    border:       2px dash 0px 0px ;
+    border:       2px 0px 0px ;
     border-color: @separatorcolor;
 }
 button.selected {
     background-color: @selected-normal-background;
     text-color:       @selected-normal-foreground;
+    border: 2px;
 }
 inputbar {
     spacing:    0;
