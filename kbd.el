@@ -20,21 +20,29 @@
 
 (global-set-key (kbd "C-c C-k")  'kill-star-buffers)
 
+;;; Enlarge and shrink emacs windows.
 (global-set-key (kbd "M-s-<right>") 'enlarge-window-horizontally)
 (global-set-key (kbd "M-s-<left>") 'shrink-window-horizontally)
 (global-set-key (kbd "M-s-<up>") 'enlarge-window)
 (global-set-key (kbd "M-s-<down>") 'shrink-window)
 
+;;; Move emacs windows.
 (global-set-key (kbd "C-s-<right>") 'windmove-right)
 (global-set-key (kbd "C-s-<left>") 'windmove-left)
 (global-set-key (kbd "C-s-<up>") 'windmove-up)
 (global-set-key (kbd "C-s-<down>") 'windmove-down)
 
+;;; Shift buffers.
 (global-set-key (kbd "M-C-s-<right>") 'buf-move-right)
 (global-set-key (kbd "M-C-s-<left>") 'buf-move-left)
 (global-set-key (kbd "M-C-s-<up>") 'buf-move-up)
 (global-set-key (kbd "M-C-s-<down>") 'buf-move-down)
 
+;;; Drag words, lines
+(global-set-key (kbd "M-<up>") 'drag-stuff-up)
+(global-set-key (kbd "M-<down>") 'drag-stuff-down)
+(global-set-key (kbd "M-<left>") 'drag-stuff-left)
+(global-set-key (kbd "M-<right>") 'drag-stuff-right)
 
 (defun swap-windows () (interactive)
        (let ((buf (current-buffer)))
