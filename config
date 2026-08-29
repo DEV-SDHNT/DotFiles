@@ -29,10 +29,10 @@ exec --no-startup-id setxkbmap mykeys -variant basics
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-
 exec --no-startup-id thunar --daemon
-exec --no-startup-id picom -b
+#exec --no-startup-id picom -b
 exec --no-startup-id emacs --daemon
+exec_always --no-startup-id setxkbmap -option keypad:pointerkeys
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -248,10 +248,20 @@ client.placeholder      #00aa00 #00aa0066 #000000 #00aa00  #00aa00
 client.background       #000000
 
 #exec_always feh --bg-fill /home/jarvis/Pictures/'beautiful-anime-character-cartoon-scene.jpg'
-exec_always feh --bg-fill /home/jarvis/Pictures/'mythical-dragon-beast-anime-style.jpg'
+exec_always feh --bg-fill /home/jarvis/Pictures/'baccs.jpg'
 #exec_always feh --bg-fill /home/jarvis/Pictures/'anime-moon-landscape.jpg'
 #exec_always feh --bg-fill /home/jarvis/Pictures/'japan-background-digital-art.jpg'  
 #exec_always feh --bg-fill /home/jarvis/Pictures/'anime-character.png'
 #exec_always feh --bg-fill --randomize --recursive --reload 3 ~/Pictures
 #exec_always feh --bg-fill /home/jarvis/Pictures/regular-anime-1.jpg
 #bindsym $mod+Shift+i exec feh --bg-fill /home/jarvis/Pictures/'bw.png'
+
+# Global floating window size 
+floating_maximum_size 800 x 600
+floating_minimum_size 200 x 150
+
+# Enable floating and set dimensions for file dialogs
+#for_window [window_role="GtkFileChooserDialog"] floating enable, resize set 800px 600px, move position center
+#for_window [title="^Save File$"] floating enable, resize set 800px 600px, move position center
+#for_window [title="^Open File$"] floating enable, resize set 800px 600px, move position center
+#for_window [window_role="pop-up"] floating enable, resize set 800px 600px, move position center
